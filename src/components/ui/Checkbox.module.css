@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    align-items: flex-start;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    margin: 0;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.checkmark svg {
+    width: 14px;
+    height: 14px;
+    color: var(--text-inverse);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all var(--transition-fast);
+}
+
+.input:checked+.checkmark {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.input:checked+.checkmark svg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.input:focus-visible+.checkmark {
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.input:disabled+.checkmark {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.labelContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.description {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+}
+
+.hasError .checkmark {
+    border-color: var(--danger);
+}
+
+.error {
+    width: 100%;
+    font-size: var(--font-size-xs);
+    color: var(--danger);
+}

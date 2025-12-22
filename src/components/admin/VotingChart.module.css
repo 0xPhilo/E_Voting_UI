@@ -1,0 +1,74 @@
+.card {
+    height: 100%;
+}
+
+.title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin: 0 0 var(--space-lg) 0;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.barContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.barInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+}
+
+.barLabel {
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.barValue {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.barTrack {
+    height: 12px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 0.5s ease-out;
+    min-width: 4px;
+}
+
+.total {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.total strong {
+    color: var(--text-primary);
+}
+
+.empty {
+    text-align: center;
+    color: var(--text-muted);
+    padding: var(--space-lg);
+    font-size: var(--font-size-sm);
+}

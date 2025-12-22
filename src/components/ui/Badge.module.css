@@ -1,0 +1,51 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+/* Sizes */
+.sm {
+    padding: 2px var(--space-sm);
+    font-size: var(--font-size-xs);
+}
+
+.md {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-sm);
+}
+
+/* Variants */
+.default {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.primary {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.secondary {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--secondary);
+}
+
+.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--secondary);
+}
+
+.warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--accent);
+}
+
+.danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+}

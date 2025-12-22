@@ -1,0 +1,80 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+}
+
+.layout {
+    flex: 1;
+    display: flex;
+}
+
+.main {
+    flex: 1;
+    padding: var(--space-lg);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.searchForm {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: flex-end;
+}
+
+.searchForm>div:first-child {
+    flex: 1;
+}
+
+.filterButtons {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.tokenCell {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.token {
+    font-family: monospace;
+    color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: var(--space-md);
+    }
+
+    .searchForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filterButtons {
+        flex-wrap: wrap;
+    }
+}

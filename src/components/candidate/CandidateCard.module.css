@@ -1,0 +1,96 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.card.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.header {
+    padding: var(--space-md) var(--space-md) 0;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+.photoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    transition: border-color var(--transition-fast);
+}
+
+.card:hover .photo,
+.card[class*="selected"] .photo {
+    border-color: var(--primary);
+}
+
+.photoPlaceholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 3px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+.role {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    font-weight: var(--font-weight-medium);
+}
+
+.names {
+    padding: 0 var(--space-md) var(--space-md);
+}
+
+.name {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.separator {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    margin: var(--space-xs) 0;
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    border-top: 1px solid var(--border);
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+
+    .photo,
+    .photoPlaceholder {
+        width: 100px;
+        height: 100px;
+    }
+}
