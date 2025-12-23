@@ -17,8 +17,22 @@ const nextConfig = {
         port: '8000',
         pathname: '/storage/**',
       },
+      {
+        protocol: 'http',
+        hostname: '192.168.101.58',//testing use
+        port: '8000',
+        pathname: '/storage/**',
+      },
     ],
   },
+
+  // Allow cross-origin requests from network devices in development
+  allowedDevOrigins: [
+    'http://192.168.*',
+    'http://10.*',
+    'http://172.16.*',
+    'http://localhost:3000',
+  ],
 };
 
 export default nextConfig;
